@@ -1,0 +1,29 @@
+<div class="vjs-network-infrastructure">
+  <div class="vjs-ni-left-sidebar">
+    <h3>Palette</h3>
+    <div class="vjs-ni-palette-section">
+      <vjs-diagram-palette [showLabels]="true" [iconSize]="{width:40, height:40}" [dragSize]="{width:80, height:80}" class="vjs-ni-palette"/>
+    </div>
+    <h3>Properties</h3>
+    <ni-inspector/>
+  </div>
+  <div class="vjs-ni-diagram-container">
+    <vjs-diagram url="/dataset.json" [options]="diagramOptions" class="vjs-ni-vjs-surface">
+      <vjs-controls class="vjs-ni-controls"/>
+    </vjs-diagram>
+  </div>
+  <div class="vjs-ni-sidebar">
+    <div class="vjs-ni-chart-section">
+      <h3>Resource Metrics</h3>
+      <div class="vjs-ni-chart-card">
+        <h4>Monthly Spend</h4>
+        <ni-total/>
+        <vjs-pie-chart [options]="pieChartOptions" [useModel]="true"/>
+      </div>
+      <div class="vjs-ni-chart-card">
+        <h4>Instance Types</h4>
+        <vjs-bar-chart [options]="barChartOptions" [useModel]="true"/>
+      </div>
+    </div>
+  </div>
+</div>
