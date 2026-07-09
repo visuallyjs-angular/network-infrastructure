@@ -23,7 +23,7 @@ import {
 
         <div class="vjs-inspector-type">Type: {{ currentType }}</div>
 
-        <div class="vjs-inspector-section">
+        <div class="vjs-inspector-section" style="margin-top: 0.5rem;">
           <label>Fill color</label>
           <vjs-color [propertyName]="PROPERTY_FILL"/>
         </div>
